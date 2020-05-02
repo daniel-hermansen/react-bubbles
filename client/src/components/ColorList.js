@@ -30,7 +30,7 @@ const ColorList = ({ colors, updateColors, update }) => {
       console.log(res.data);
       update();
       setEditing(false);
-      push("/bubblepage");
+      push("/bubbles");
     })
     .catch(err => console.log("colorList put error -", err));
   };
