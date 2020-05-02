@@ -8,6 +8,7 @@ const initialColor = {
   code: { hex: "" }
 };
 
+
 const ColorList = ({ colors, updateColors, update }) => {
   console.log(colors);
   const [editing, setEditing] = useState(false);
@@ -34,6 +35,7 @@ const ColorList = ({ colors, updateColors, update }) => {
     })
     .catch(err => console.log("colorList put error -", err));
   };
+
 
   const deleteColor = color => {    axiosWithAuth()
     .delete(`/api/colors/${color.id}`)
